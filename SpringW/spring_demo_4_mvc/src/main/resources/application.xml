@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--构建user对象-->
+    <bean id="user" class="com.zrrd.pojo.User">
+        <property name="id" value="111"/>
+        <property name="name" value="SpringMVC设计模式"/>
+    </bean>
+    <!--
+        2.构建dao对象
+        根据面向接口编程
+        id：结构名称
+        class:实现类的包路径
+    -->
+    <bean id="userDao" class="com.zrrd.dao.UserDAOImpl"/>
+    <!--构建service-->
+    <bean id="userService" class="com.zrrd.service.UserServiceImpl">
+        <property name="userDAO" ref="userDao"/>
+    </bean>
+    <!--构建Controller-->
+    <bean id="userControl" class="com.zrrd.control.UserControl" >
+        <property name="userService" ref="userService"/>
+        <property name="user" ref="user"/>
+    </bean>
+
+</beans>

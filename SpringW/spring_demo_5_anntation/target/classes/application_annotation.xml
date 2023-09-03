@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd
+        ">
+
+    <!--
+        1.构建user对象
+     -->
+    <bean id="user" class="com.zrrd.pojo.User">
+        <property name="id" value="111"/>
+        <property name="name" value="SpringMVC设计模式"/>
+    </bean>
+    <!--
+        2.让注解生效 开启包扫描
+        包路径特点:给定包路径 则自动扫描同包及子孙包中类
+        base-package="com.zrrd"  查找包下的注解
+        书写方式  多包路径  使用  ,  间隔
+        use-default-filters:
+            true: 表示扫描其他注解
+            false: 表示按照用户指定的注解进行加载 默认规则不生效
+     -->
+    <!--包扫描-->
+<!--    <context:component-scan base-package="com.zrrd.control, com.zrrd.dao, com.zrrd.service"/>-->
+    <context:component-scan base-package="com.zrrd" use-default-filters="true"/>
+
+</beans>

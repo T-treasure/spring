@@ -1,0 +1,21 @@
+server:
+  port: 8090 #配置端口
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/jtadmin?serverTimezone=Asia/Shanghai&useSSL=false&useUnicode=true&characterEncoding=utf8
+    username: root
+    password: root
+  #spring整合mybatis配置
+mybatis-plus:
+  #定义别名包
+  type-aliases-package: com.jt.pojo
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  #开启驼峰映射
+  configuration:
+    map-underscore-to-camel-case: true
+# 添加MP日志  打印执行sql
+logging:
+  level:
+    com.jt.mapper: debug

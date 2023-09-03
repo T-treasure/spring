@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>SpringMVC入门案例</title>
+</head>
+<body>
+<h1>用户测试代码</h1>
+<h3 th:text="${id}"/>
+<h3 th:text="${name}"/>
+<br>
+<form action="/addUser" method="post">
+    <table border="1px" cellpadding="0" cellspacing="0" align="center" width="350px" style="margin-top: 50px">
+        <tr align="center">
+            <td colspan="2"><h3>表格提交数据</h3></td>
+        </tr>
+        <tr>
+            <td>ID:</td>
+            <!--
+                id: 标签的唯一标识不能重复
+                name: 数据传递的必要因素，不能省略
+            -->
+            <td><input id="id" name="id" type="text"/></td>
+        </tr>
+        <tr>
+            <td>姓名:</td>
+            <td><input id="name" name="name" type="text"/></td>
+        </tr>
+        <tr>
+            <td>宠物ID:</td>
+            <td><input  name="dog.id" type="text"/></td>
+        </tr>
+        <tr>
+            <td>宠物名称:</td>
+            <td><input name="dog.name" type="text"/></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <button type="submit">提交</button>
+            </td>
+        </tr>
+        <tr>
+            <td>爱好:</td>
+            <td>
+                <input name="hobbies" type="checkbox" value="敲键盘"/>敲代码
+                <input name="hobbies" type="checkbox" value="敲键盘"/>敲键盘
+                <input name="hobbies" type="checkbox" value="敲键盘"/>敲主机
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

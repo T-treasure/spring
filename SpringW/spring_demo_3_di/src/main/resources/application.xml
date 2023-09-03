@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--管理user对象-->
+    <bean id="user" class="com.zrrd.pojo.User" >
+        <!--调用对象的set方法实现赋值-->
+        <property name="id" value="101"/>
+        <property name="name" value="卧龙"/>
+    </bean>
+
+<!--    &lt;!&ndash;构造方法注入&ndash;&gt;-->
+<!--    <bean id="user1" class="com.zrrd.pojo.User">-->
+<!--        <constructor-arg name="id" value="102"/>-->
+<!--        <constructor-arg name="name" value="凤雏"/>-->
+<!--    </bean>-->
+
+    <!--集合赋值-->
+    <bean id="user1" class="com.zrrd.pojo.User">
+        <property name="id" value="101"/>
+        <property name="name" value="赵云"/>
+        <property name="list">
+            <list>
+                <value>1</value>
+                <value>2</value>
+                <value>3</value>
+            </list>
+        </property>
+        <property name="set">
+            <set>
+                <value>4</value>
+                <value>5</value>
+                <value>6</value>
+            </set>
+        </property>
+        <property name="map">
+            <map>
+                <entry key="1" value="10"/>
+                <entry key="2" value="20"/>
+                <entry key="3" value="30"/>
+            </map>
+        </property>
+    </bean>
+
+    <bean id ="user2" class="com.zrrd.pojo.User">
+        <constructor-arg name="id" value="105"/>
+        <constructor-arg name="name" value="马超"/>
+        <constructor-arg name="list">
+            <list>
+                <value>1</value>
+                <value>2</value>
+                <value>3</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg name="set">
+            <list>
+                <value>4</value>
+                <value>5</value>
+                <value>6</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg name="map">
+            <map>
+                <entry key="2" value="20"/>
+                <entry key="3" value="30"/>
+                <entry key="4" value="40"/>
+            </map>
+        </constructor-arg>
+    </bean>
+
+</beans>

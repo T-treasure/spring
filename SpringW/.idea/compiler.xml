@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring_demo_6_mvc" />
+        <module name="spring_demo_8_aop" />
+        <module name="spring_1_base" />
+        <module name="springboot_demo_3" />
+        <module name="spring_demo_1_ioc" />
+        <module name="springboot_demo_2" />
+        <module name="spring_demo_5_anntation" />
+        <module name="springboot_demo_4" />
+        <module name="spring_demo_3_di" />
+        <module name="spring_demo_2_factory" />
+        <module name="spring_demo_4_mvc" />
+        <module name="spring_demo_7_tx" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="spring_demo_5_annotation" target="1.8" />
+      <module name="springboot_demo_1" target="1.8" />
+      <module name="springboot_test_1" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="springboot_demo_1" options="-parameters" />
+      <module name="springboot_demo_2" options="-parameters" />
+      <module name="springboot_demo_3" options="-parameters" />
+      <module name="springboot_demo_4" options="-parameters" />
+      <module name="springboot_test_1" options="-parameters" />
+    </option>
+  </component>
+</project>

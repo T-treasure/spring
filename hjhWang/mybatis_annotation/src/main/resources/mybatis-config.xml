@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--  Mybatis全局配置的根标签  -->
+<configuration>
+    <!--配置开发环境-->
+    <environments default="def">
+        <environment id="def">
+            <!--
+                1.1事务管理方式:
+                    JDBC:将事务交给JDBC就行处理（mybatis会自动开启事务 需要手动提交）
+                    MANAGED:需要自己手动管理事务
+             -->
+            <transactionManager type="JDBC"/>
+            <!--
+                1.2配置连接池信息 type的取值
+                    JVDI:已经过时
+                    UNPOOLED:不使用连接池
+                    POOLED:使用连接池
+            -->
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <!-- / 可以代表本地  localhost:3306-->
+                <property name="url" value="jdbc:mysql:///yonghedb?characterEncoding=utf-8&amp;serverTimezone=Asia/Shanghai"/>
+                <property name="username" value="root"/>
+                <property name="password" value="root"/>
+            </dataSource>
+        </environment>
+
+    </environments>
+    <!--2.导入EmpMapper.xml文件  resource= "EmpMapper的指定地址"-->
+    <mappers>
+<!--        <mapper resource="EmpMapper.xml"/>-->
+        <package name="com.zrrd.dao"/>
+    </mappers>
+
+</configuration>

@@ -1,0 +1,3 @@
+# Project exclude paths
+/jt/jt_common/target/
+/jt/jt_manage/target/

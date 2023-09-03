@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jt.mapper.DemoUserMapper">
+    <insert id="insertUser">
+        insert into demo_user(id, name, age, sex) value (null, #{name}, #{age}, #{sex})
+    </insert>
+    <update id="updateUser">
+        update demo_user set  age = #{age}, sex = #{sex} where name = #{name}
+    </update>
+
+    <select id="findAll" resultType="com.jt.pojo.DemoUser">
+        select * from demo_user
+    </select>
+
+    <delete id="deleteUser">
+        delete from demo_user where name = #{name}
+    </delete>
+</mapper>

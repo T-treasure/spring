@@ -1,0 +1,80 @@
+DEBUG [main] - 2023-07-08 11:35:02 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+DEBUG [main] - 2023-07-08 11:35:02 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] - 2023-07-08 11:35:02 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] - 2023-07-08 11:35:02 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] - 2023-07-08 11:35:02 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] - 2023-07-08 11:35:02 - Opening JDBC Connection
+DEBUG [main] - 2023-07-08 11:35:02 - Created connection 225290371.
+DEBUG [main] - 2023-07-08 11:35:02 - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@d6da883]
+DEBUG [main] - 2023-07-08 11:35:02 - ==>  Preparing: delete from emp where name = ? 
+DEBUG [main] - 2023-07-08 11:35:02 - ==> Parameters: null
+DEBUG [main] - 2023-07-08 11:35:02 - <==    Updates: 0
+DEBUG [main] - 2023-07-08 11:35:02 - Committing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@d6da883]
+DEBUG [main] - 2023-07-08 11:35:02 - Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@d6da883]
+DEBUG [main] - 2023-07-08 11:35:02 - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@d6da883]
+DEBUG [main] - 2023-07-08 11:35:02 - Returned connection 225290371 to pool.
+DEBUG [main] - 2023-07-08 11:35:49 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+DEBUG [main] - 2023-07-08 11:35:49 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] - 2023-07-08 11:35:49 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] - 2023-07-08 11:35:49 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] - 2023-07-08 11:35:49 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] - 2023-07-08 11:35:49 - Opening JDBC Connection
+DEBUG [main] - 2023-07-08 11:35:49 - Created connection 225290371.
+DEBUG [main] - 2023-07-08 11:35:49 - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@d6da883]
+DEBUG [main] - 2023-07-08 11:35:49 - ==>  Preparing: delete from emp where name = ? 
+DEBUG [main] - 2023-07-08 11:35:49 - ==> Parameters: 炼金梦梦(String)
+DEBUG [main] - 2023-07-08 11:35:49 - <==    Updates: 1
+DEBUG [main] - 2023-07-08 11:35:49 - Committing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@d6da883]
+DEBUG [main] - 2023-07-08 11:35:49 - Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@d6da883]
+DEBUG [main] - 2023-07-08 11:35:49 - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@d6da883]
+DEBUG [main] - 2023-07-08 11:35:49 - Returned connection 225290371 to pool.
+DEBUG [main] - 2023-07-08 11:41:16 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+DEBUG [main] - 2023-07-08 11:41:16 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] - 2023-07-08 11:41:16 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] - 2023-07-08 11:41:16 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] - 2023-07-08 11:41:16 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] - 2023-07-08 11:41:53 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+DEBUG [main] - 2023-07-08 11:41:53 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] - 2023-07-08 11:41:53 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] - 2023-07-08 11:41:53 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] - 2023-07-08 11:41:53 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] - 2023-07-08 11:41:53 - Opening JDBC Connection
+DEBUG [main] - 2023-07-08 11:41:54 - Created connection 1684792003.
+DEBUG [main] - 2023-07-08 11:41:54 - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@646be2c3]
+DEBUG [main] - 2023-07-08 11:41:54 - ==>  Preparing: update emp set salary = salary + 1000 where id in ( ? , ? , ? , ? , ? ) 
+DEBUG [main] - 2023-07-08 11:41:54 - ==> Parameters: 3(Integer), 5(Integer), 6(Integer), 7(Integer), 9(Integer)
+DEBUG [main] - 2023-07-08 11:41:54 - <==    Updates: 3
+DEBUG [main] - 2023-07-08 11:41:54 - Committing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@646be2c3]
+DEBUG [main] - 2023-07-08 11:41:54 - Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@646be2c3]
+DEBUG [main] - 2023-07-08 11:41:54 - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@646be2c3]
+DEBUG [main] - 2023-07-08 11:41:54 - Returned connection 1684792003 to pool.
+DEBUG [main] - 2023-07-08 11:52:38 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+DEBUG [main] - 2023-07-08 11:52:38 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] - 2023-07-08 11:52:38 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] - 2023-07-08 11:52:38 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] - 2023-07-08 11:52:38 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] - 2023-07-08 11:52:38 - Opening JDBC Connection
+DEBUG [main] - 2023-07-08 11:52:38 - Created connection 1048027629.
+DEBUG [main] - 2023-07-08 11:52:38 - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3e77a1ed]
+DEBUG [main] - 2023-07-08 11:52:38 - ==>  Preparing: insert into emp values (null, ?, ?, ?) 
+DEBUG [main] - 2023-07-08 11:52:38 - ==> Parameters: 王者梦梦(String), 保安(String), 3000(Integer)
+DEBUG [main] - 2023-07-08 11:52:38 - <==    Updates: 1
+DEBUG [main] - 2023-07-08 11:52:38 - Committing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3e77a1ed]
+DEBUG [main] - 2023-07-08 11:52:38 - Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3e77a1ed]
+DEBUG [main] - 2023-07-08 11:52:38 - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3e77a1ed]
+DEBUG [main] - 2023-07-08 11:52:38 - Returned connection 1048027629 to pool.
+DEBUG [main] - 2023-07-08 11:56:22 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+DEBUG [main] - 2023-07-08 11:56:22 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] - 2023-07-08 11:56:22 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] - 2023-07-08 11:56:22 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] - 2023-07-08 11:56:22 - PooledDataSource forcefully closed/removed all connections.
+DEBUG [main] - 2023-07-08 11:56:22 - Opening JDBC Connection
+DEBUG [main] - 2023-07-08 11:56:22 - Created connection 1048027629.
+DEBUG [main] - 2023-07-08 11:56:22 - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3e77a1ed]
+DEBUG [main] - 2023-07-08 11:56:22 - ==>  Preparing: update emp set job = ?, salary = ? where name = ? 
+DEBUG [main] - 2023-07-08 11:56:22 - ==> Parameters: 程序员(String), 3200.0(Double), 王者梦梦(String)
+DEBUG [main] - 2023-07-08 11:56:22 - <==    Updates: 1
+DEBUG [main] - 2023-07-08 11:56:22 - Committing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3e77a1ed]
+DEBUG [main] - 2023-07-08 11:56:22 - Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3e77a1ed]
+DEBUG [main] - 2023-07-08 11:56:22 - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3e77a1ed]
+DEBUG [main] - 2023-07-08 11:56:22 - Returned connection 1048027629 to pool.

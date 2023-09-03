@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/spring_1_base/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_Demo_1_ioc/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_demo_2_factory/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_demo_3_di/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_demo_4_mvc/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_demo_4_annotation/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_demo_5_anntation/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_demo_6_mvc/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_demo_7_tx/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_demo_8_aop/pom.xml" />
+        <option value="$PROJECT_DIR$/../SpringBootW/springboot_demo_1/pom.xml" />
+        <option value="$PROJECT_DIR$/../springboot/springboot_demo_2/pom.xml" />
+        <option value="$PROJECT_DIR$/../springboot/springboot_demo_3/pom.xml" />
+        <option value="$PROJECT_DIR$/../springboot/springboot_demo_4/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

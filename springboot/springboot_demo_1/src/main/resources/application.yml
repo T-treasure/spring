@@ -1,0 +1,46 @@
+##   YML文件语法
+## 1.数据结构 k-v结构
+## 2.k与v需要用: "空格"连接
+## 3.YML配置文件有父子级关系所以注意缩进位置
+
+spring:
+  profiles:
+    active: test
+
+#环境分割  "---"
+---
+spring:
+  config:
+    activate:
+      on-profile: prod  #生产环境
+  banner:
+    image:
+      location: 1.jpg
+server:
+  port: 8099 #配置端口
+  servlet:
+    context-path: /jt    # /表示根目录
+
+#定义dept属性值 yml文件默认支持UTF-8
+dept:
+  id: 101
+  name: 奖励部
+
+#环境分割  "---"
+---
+spring:
+  config:
+    activate:
+      on-profile: test  #测试环境
+  banner:
+    image:
+      location: 1.jpg
+server:
+  port: 8082 #配置端口
+  servlet:
+    context-path: /    # /表示根目录
+
+#定义dept属性值 yml文件默认支持UTF-8
+dept:
+  id: 102
+  name: 打鱼部

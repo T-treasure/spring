@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+        静态工厂实例化对象 方法必须是static
+    -->
+    <!--
+        直接类名加点调用静态方法
+    -->
+    <bean id="calendar1" class="com.zrrd.factory.StaticFactory" factory-method="getCalendar"/>
+
+    <!--
+        实例化工厂
+        步骤1：将工厂交给spring容器进行管理
+        步骤2：通过对象调用方法
+     -->
+    <bean id="InstanceFactory" class="com.zrrd.factory.InstanceFactory"/>
+    <!--
+        创建一个bean相当于创建对象
+        后续对象加点调用方法
+     -->
+    <bean id="calendar2" factory-bean="InstanceFactory" factory-method="getCalendar"/>
+    <!--
+        Spring工厂模式
+    -->
+    <bean id="calendar3" class="com.zrrd.factory.SpringFactory"/>
+
+    <!--
+        测试单例、多例 通过scope控制对象的单例多例
+        scope:
+               singleton 单例
+               prototype 多例
+        lazy-init: 控制 true开启懒加载、 false、default不开启懒加载(饿汉模式 )
+                   是否开启懒加载只对单例模式有用
+                   多例模式一直懒加载
+    -->
+<!--    <bean id="user" class="com.zrrd.pojo.User" scope="prototype" lazy-init="true"/>-->
+
+    <!--
+        init-method：初始化方法
+        destroy-method：销毁方法
+    -->
+    <bean id="user" class="com.zrrd.pojo.User" init-method="init" destroy-method="destroy">
+    </bean>
+
+</beans>

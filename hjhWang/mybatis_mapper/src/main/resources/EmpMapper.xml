@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zrrd.mybatis.dao.EmpMapper">
+    <update id="update">
+        update emp set salary = salary + 1000 where id in
+            <foreach collection="list" open="(" item="id" close=")" separator=",">
+                #{id}
+            </foreach>
+    </update>
+
+    <delete id="delete">
+        delete from emp where name = #{name}
+    </delete>
+
+    <select id="queryAll" resultType="com.zrrd.mybatis.pojo.Emp">
+        select * from emp
+    </select>
+
+    <insert id="insert">
+        insert into emp values (null, "爱心梦梦", "医生", 5000)
+    </insert>
+
+    <insert id="insert2">
+        insert into emp values (null, #{name}, #{job}, #{salary})
+    </insert>
+
+    <update id="update2">
+        update emp set job = #{job}, salary = #{salary} where name = #{name}
+    </update>
+
+    <select id="select2" resultType="com.zrrd.mybatis.pojo.Emp">
+        select ${columns} from emp
+    </select>
+
+    <delete id="delete2">
+        delete from emp where ${where}
+    </delete>
+
+    <delete id="delete3">
+        delete from emp where name = #{name};
+    </delete>
+
+    <select id="select3" resultType="com.zrrd.mybatis.pojo.Emp">
+        select * from emp
+        where 1 = 1
+        <if test="minSal != null">
+            and salary > #{minSal}
+        </if>
+        <if test="maxSal != null">
+            and salary &lt; #{maxSal}
+        </if>
+    </select>
+
+    <select id="select4" resultType="com.zrrd.mybatis.pojo.Emp">
+        select * from emp
+        <where>
+            <if test="minSal != null">
+                salary > #{minSal}
+            </if>
+            <if test="maxSal != null">
+                and salary &lt; #{maxSal}
+            </if>
+        </where>
+    </select>
+
+    <delete id="delete4">
+        delete from emp where id in
+        <foreach collection="ids" open="(" item="id" close=")" separator=",">
+            #{id}
+        </foreach>
+    </delete>
+
+    <update id="update3">
+        update emp set salary = salary + 1000 where id in
+        <foreach collection="ids" open="(" separator="," close=")" item="id">
+            #{id}
+        </foreach>
+    </update>
+
+</mapper>

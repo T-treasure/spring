@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>用户列表数据</title>
+</head>
+<body>
+    <!--准备一个表格-->
+    <table border="1px" align="center" width="800px" cellspacing="0" cellpadding="10">
+        <tr align="center">
+            <td colspan="4">用户列表</td>
+        </tr>
+        <tr align="center">
+            <td>ID</td>
+            <td>姓名</td>
+            <td>年龄</td>
+            <td>性别</td>
+        </tr>
+        <!--1.页面通过request动态获取userList数据 之后tr展现-->
+        <tr align="center" th:each="user : ${userList}">
+            <td th:text="${user.id}"></td>
+            <td th:text="${user.name}"></td>
+            <td th:text="${user.age}"></td>
+            <td th:text="${user.sex}"></td>
+        </tr>
+    </table>
+</body>
+</html>
