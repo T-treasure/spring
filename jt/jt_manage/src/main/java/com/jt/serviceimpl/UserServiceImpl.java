@@ -41,7 +41,6 @@ public class UserServiceImpl implements UserService {
      * MD5hash方式升级
      * 用户名admin  密码admin123456
      * */
-    @Override
     public String findUserByUP(User user) {
         //1.将密码进行加密  一般可能添加  盐值(由公司的域名构成)
         //hash(MD5(www.baidu.com123456))
@@ -68,7 +67,6 @@ public class UserServiceImpl implements UserService {
     * MP实现分页的查询
     * MP通过分页对象进行查询  获取分页的相关数据
     * */
-    @Override
     public PageResult findUserByPage(PageResult pageResult) {
         //1.定义分页对象  2个参数
         IPage<User> page = new Page<>(pageResult.getPageNum(), pageResult.getPageSize());

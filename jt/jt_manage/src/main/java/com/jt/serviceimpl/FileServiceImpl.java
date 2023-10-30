@@ -37,7 +37,6 @@ public class FileServiceImpl implements FileService {
     * 3.1注意每一个参数的赋值
     * */
 
-    @Override
     public ImageVO upload(MultipartFile file) throws IOException {
         //1.1校验是否为图片类型 abc.jpg ABC.APG  文件大小写
         String fileName = file.getOriginalFilename();
